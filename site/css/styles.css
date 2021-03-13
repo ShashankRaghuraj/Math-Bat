@@ -15,3 +15,9 @@
 .gw-HIDE {
     display: none;
 }
+
+.gw-maintitle {
+    text-align: center;
+    font-size: 5vw;
+    font-family: "Nanum Brush Script";
+}
