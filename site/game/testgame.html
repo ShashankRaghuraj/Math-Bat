@@ -13,14 +13,25 @@
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-    var canvas = document.getElementById("myCanvas");
+      var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-
-    ctx.beginPath();
-ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
+///most of this is sample code
+	ctx.beginPath();
+ctx.rect(0, 0, 150, 50);
+ctx.fillStyle = "#green";
 ctx.fill();
 ctx.closePath();
+
+ctx.beginPath();
+ctx.rect(330, 0, 150, 50);
+ctx.strokeStyle = "rgba(0, 0, 255, 1)";
+ctx.stroke();
+ctx.closePath();
+
+function clear() {
+	ctx.beginPath();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.closePath();}  
 </script> 
 
 </body>
