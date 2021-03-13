@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+@-moz-keyframes 
+fade-it { 0% {
+opacity:0
+}
+100% {
+opacity:1
+}
+}
+
+@-webkit-keyframes 
+fade-it { 0% {
+opacity:0
+}
+100% {
+opacity:1
+}
+}
+
+@keyframes 
+fade-it { 0% {
+opacity:0
+}
+100% {
+opacity:1
+}
+}
+
+
+.rt-style h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    /* font-size: 2rem; */
+  }
+  
+
+.js-fade-in-verb {
+  animation-name: fade-it;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fade-it;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards
+}
+
+.verb.js-block { display: inline-block }
+
+.verb.js-hide {
+  display: none;
+  opacity: 0
+}
+
+.verb {
+  display: inline-block;
+  visibility: visible;
+  border-bottom: 1px solid
+}
+
+
+

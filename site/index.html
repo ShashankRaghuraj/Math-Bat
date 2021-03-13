@@ -27,6 +27,9 @@
   <link href="css/cheatsheet.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/offcanvas.css" rel="stylesheet">
+  <link href="css/rotate.css" rel="stylesheet">
+  <link href="css/rotatevert.css" rel="stylesheet">
+
 
   <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
     integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
@@ -52,10 +55,10 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="notused.html">Extras</a>
+            <a class="nav-link" href="trash80/notused.html">Extras</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="game/moon.html">Second Page</a>
+            <a class="nav-link" href="secondpage.html">Dash</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
@@ -84,137 +87,154 @@
     <nav class="nav nav-underline" aria-label="Secondary navigation">
       <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
       <a class="nav-link" href="#">
-        Friends
+        Updates
         <span class="badge bg-light text-dark rounded-pill align-text-bottom">27</span>
       </a>
       <a class="nav-link" href="#">Explore</a>
       <a class="nav-link" href="#">Suggestions</a>
       <a class="nav-link" href="#">Link</a>
+      <!-- <a class="nav-link" href="#">Link</a>
       <a class="nav-link" href="#">Link</a>
       <a class="nav-link" href="#">Link</a>
-      <a class="nav-link" href="#">Link</a>
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#">Link</a> -->
     </nav>
   </div>
 
+  <!-- masonry (also py-5) -->
+  <main class="container py-5" style="padding-top: 1rem !important">
 
-  <main class="container">
-    <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
-      <img class="me-3" src="assets/brand/bootstrap-logo-white.svg" alt="" width="48" height="38">
-      <div class="lh-1">
-        <h1 class="h6 mb-0 text-white lh-1">Bootstrap</h1>
-        <small>Since 2011</small>
-      </div>
-    </div>
-
-    <div class="my-3 p-3 bg-body rounded shadow-sm">
-      <h6 class="border-bottom pb-2 mb-0">Recent updates</h6>
-      <div class="d-flex text-muted pt-3">
-        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-        </svg>
-
-        <p class="pb-3 mb-0 small lh-sm border-bottom">
-          <strong class="d-block text-gray-dark">@username</strong>
-          Some representative placeholder content, with some information about this user. Imagine this being some sort
-          of status update, perhaps?
-        </p>
-      </div>
-      <div class="d-flex text-muted pt-3">
-        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#e83e8c" /><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text>
-        </svg>
-
-        <p class="pb-3 mb-0 small lh-sm border-bottom">
-          <strong class="d-block text-gray-dark">@username</strong>
-          Some more representative placeholder content, related to this other user. Another status update, perhaps.
-        </p>
-      </div>
-      <div class="d-flex text-muted pt-3">
-        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#6f42c1" /><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text>
-        </svg>
-
-        <p class="pb-3 mb-0 small lh-sm border-bottom">
-          <strong class="d-block text-gray-dark">@username</strong>
-          This user also gets some representative placeholder content. Maybe they did something interesting, and you
-          really want to highlight this in the recent updates.
-        </p>
-      </div>
-      <small class="d-block text-end mt-3">
-        <a href="#">All updates</a>
-      </small>
-    </div>
-
-    <div class="my-3 p-3 bg-body rounded shadow-sm">
-      <h6 class="border-bottom pb-2 mb-0">Suggestions</h6>
-      <div class="d-flex text-muted pt-3">
-        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-        </svg>
-
-        <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
-          <div class="d-flex justify-content-between">
-            <strong class="text-gray-dark">Full Name</strong>
-            <a href="#">Follow</a>
-          </div>
-          <span class="d-block">@username</span>
+    <!-- rotate v1 -->
+    <section class="bg-img intro-module">
+    
+      <div class="container block-center">
+        <div class="block-caption py-4 text-center text-md-left">
+          <h1 class="display-1 mb-6 mb-md-n1">
+            <section class="rt-style">
+              <h1>I want to learn <span class="verb">Math</span>.</h1>
+            </section>
+            <p class="lead text-md-right">Learning paths for all.</p>
         </div>
       </div>
-      <div class="d-flex text-muted pt-3">
-        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-        </svg>
+    </section>
 
-        <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
-          <div class="d-flex justify-content-between">
-            <strong class="text-gray-dark">Full Name</strong>
-            <a href="#">Follow</a>
+
+
+
+
+
+    <!-- masonry section -->
+    <!-- style="margin-top: 40vh;"  (optional based on thing above)  -->
+    <section>
+      <div class="row" data-masonry='{"percentPosition": true }'>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image
+                cap</text>
+            </svg>
+
+            <div class="card-body">
+              <h5 class="card-title">Card title that wraps to a new line</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+            </div>
           </div>
-          <span class="d-block">@username</span>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card p-3">
+            <figure class="p-3 mb-0">
+              <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer mb-0 text-muted">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="200" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image
+                cap</text>
+            </svg>
+
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card bg-primary text-white text-center p-3">
+            <figure class="mb-0">
+              <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer mb-0 text-white">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has a regular title and short paragraph of text below it.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card">
+            <svg class="bd-placeholder-img card-img" width="100%" height="260" xmlns="http://www.w3.org/2000/svg"
+              role="img" aria-label="Placeholder: Card image" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <title>Placeholder</title>
+              <rect width="100%" height="100%" fill="#868e96" /><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Card
+                image</text>
+            </svg>
+
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card p-3 text-end">
+            <figure class="mb-0">
+              <blockquote class="blockquote">
+                <p>A well-known quote, contained in a blockquote element.</p>
+              </blockquote>
+              <figcaption class="blockquote-footer mb-0 text-muted">
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is another card with title and supporting text below. This card has some
+                additional content to make it slightly taller overall.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="d-flex text-muted pt-3">
-        <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32"
-          xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32"
-          preserveAspectRatio="xMidYMid slice" focusable="false">
-          <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#007bff" /><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-        </svg>
 
-        <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
-          <div class="d-flex justify-content-between">
-            <strong class="text-gray-dark">Full Name</strong>
-            <a href="#">Follow</a>
-          </div>
-          <span class="d-block">@username</span>
-        </div>
-      </div>
-      <small class="d-block text-end mt-3">
-        <a href="#">All suggestions</a>
-      </small>
-    </div>
+
+    </section>
+
+
 
 
 
     <!-- toast baby -->
-    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
-
+    <button type="button" class="btn btn-primary gw-HIDE" id="liveToastBtn">Show live toast</button>
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
       <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="toast-header">
@@ -224,12 +244,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
-          Welcome to our site! Get ready to learn!
+          Welcome to Math Bat! Get ready to learn!
         </div>
       </div>
     </div>
-
-
 
 
     <!-- 
@@ -242,12 +260,19 @@
  -->
 
 
-
   </main>
 
+  <!-- scripts import -->
   <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/cheatsheet.js"></script>
-  <script src="offcanvas.js"></script>
+  <script src="js/offcanvas.js"></script>
+  <script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+    crossorigin="anonymous"></script>
+  <script src="js/rotatescript.js" defer></script>
+  <script src="js/rotatevert.js" defer></script>
+
+
 
 </body>
 
