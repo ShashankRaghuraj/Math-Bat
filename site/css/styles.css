@@ -8,3 +8,10 @@
     padding-right: 5% !important;
 }
 
+.gw-fullvw {
+    width: 100vw !important;
+}
+
+.gw-HIDE {
+    display: none;
+}
