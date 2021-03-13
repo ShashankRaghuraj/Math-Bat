@@ -28,6 +28,10 @@
   <link href="css/styles.css" rel="stylesheet">
   <link href="css/offcanvas.css" rel="stylesheet">
 
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+    integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+    async></script>
+
 </head>
 
 <!-- please for the love of all that is holy use sections to make content go below instead of next to. grassyass -->
@@ -51,6 +55,9 @@
             <a class="nav-link" href="notused.html">Extras</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#secondpage">Second Page</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
           <li class="nav-item dropdown">
@@ -71,7 +78,7 @@
     </div>
   </nav>
 
-  
+
   <!-- navbar under navbar -->
   <div class="nav-scroller bg--body shadow-sm">
     <nav class="nav nav-underline" aria-label="Secondary navigation">
@@ -93,7 +100,7 @@
 
   <main class="container">
     <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm">
-      <img class="me-3" src="../assets/brand/moon-icon-01.png" alt="" width="48" height="38">
+      <img class="me-3" src="assets/brand/bootstrap-logo-white.svg" alt="" width="48" height="38">
       <div class="lh-1">
         <h1 class="h6 mb-0 text-white lh-1">Bootstrap</h1>
         <small>Since 2011</small>
@@ -202,39 +209,30 @@
         <a href="#">All suggestions</a>
       </small>
     </div>
-  </main>
+
+
+
+    <!-- toast baby -->
+    <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+      <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <img src="assets/brand/moon-icon-02.png" class="rounded me-2" width="15px" height="15px" height alt="...">
+          <strong class="me-auto">Info Message</strong>
+          <small>From Gabe</small>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          Welcome to our site! Get ready to learn!
+        </div>
+      </div>
+    </div>
 
 
 
 
-
-
-
-
-
-
-
-  <div class="gw-HIDE">
-    <!-- main content -->
-    <div class="bd-cheatsheet container-fluid bg-body">
-
-
-      <!-- start of gw main -->
-      <main class="gw-fit gw-main">
-
-        <section>
-          <h1>What's all this about?</h1>
-          <h5>We made a lunar lander math game</h5>
-        </section>
-        <section>
-          <span class="badge bg-info">In Progress</span>
-          <p>To the Moon is a simulation game for future NASA children, to learn the basics of landing a mooars rover.
-            Raymond Tao.</p>
-        </section>
-
-
-
-        <!-- 
+    <!-- 
   problem 1
   curret skill
   problem
@@ -245,14 +243,11 @@
 
 
 
+  </main>
 
-      </main>
-
-    </div>
-
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/cheatsheet.js"></script>
-    <script src="offcanvas.js"></script>
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/cheatsheet.js"></script>
+  <script src="offcanvas.js"></script>
 
 </body>
 
