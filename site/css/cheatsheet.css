@@ -97,13 +97,13 @@ body {
   
   /* Layout */
   @media (min-width: 1200px) {
-    body {
+    /* body {
       display: grid;
       gap: 1rem;
       grid-template-columns: 1fr 4fr 1fr;
       grid-template-rows: auto;
     }
-  
+   */
     .bd-header {
       position: fixed;
       top: 0;
