@@ -1,3 +1,9 @@
-.map {
-    visibility: hidden;
+.gw-fit {
+    width: -webkit-max-content;
 }
+
+.gw-main {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+
