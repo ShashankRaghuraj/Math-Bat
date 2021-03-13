@@ -1,0 +1,35 @@
+ var codinglangwords = [
+        'JavaScript',
+        'CSS3',
+        'HTML5',
+        'Ruby',
+        'Python',
+        'C++',
+        'jQuery',
+        'Google',
+        'Object C',
+        'Mysql'
+        ],
+
+
+ var words = [
+        'JavaScript',
+        'CSS3',
+        'HTML5',
+        'Ruby',
+        'Python',
+        'C++',
+        'jQuery',
+        'Google',
+        'Object C',
+        'Mysql'
+        ],
+
+             'Programming',
+        'Calculus',
+        'Algebra',
+        'Geometry',
+        'History',
+        'Language',
+        'Pre-Calc',
+        
