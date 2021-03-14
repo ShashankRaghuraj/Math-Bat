@@ -32,3 +32,34 @@
     display: inline-block;
     vertical-align: top;
 }
+
+.gw-centermedaddy {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.image-preview__default-text {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-preview__image {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-preview {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.inpFile {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

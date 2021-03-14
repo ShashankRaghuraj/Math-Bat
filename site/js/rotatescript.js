@@ -1,10 +1,10 @@
 var words = (function () {
     var words = [
         "Algebra 1", "Geometry", "Algebra 2", "Precalculus", "Statistics", "Calculus", "AP Statistics", 
-        "Multivariable calculus", "Differential equations", "Linear algebra", "SAT", "LSAT", "Praxis Core", 
+        "Multivariable Calculus", "Differential Equations", "Linear algebra", "SAT", "LSAT", "Praxis Core", 
         "ACT", "Biology", "Chemistry", "Physics", "Enviromental Science", "Programming", "US History", 
         "US Government", "Politics", "World History", "Art History", "Economics", "Macroeconomics", 
-        "Microeconomics", "Careers", "Personal finance"
+        "Microeconomics", "Careers", "Personal finance",
     ],
         el = document.querySelector('.verb'),
         currentIndex,

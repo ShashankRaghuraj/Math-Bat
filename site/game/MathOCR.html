@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+    <style>
+        .image-preview {
+            width: 300px;
+            min-width: 100px;
+            border: 2px solid lightgray;
+            margin-top: 15px;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: lightgray;
+
+        }
+
+        .image-preview__image {
+            display: none;
+            width: 100%;
+        }
+    </style>
+
+<!-- <link href="../css/cheatsheet.css" rel="stylesheet">
+<link href="../css/styles.css" rel="stylesheet">
+<link href="../css/offcanvas.css" rel="stylesheet">
+<link href="../css/rotate.css" rel="stylesheet"> -->
+</head>
+
+<body>
+    <!-- .inpFile -->
+    <input  class="inpFile" type="file" name="inpFile" id="inpFile">
+    <!-- .image-preview -->
+    <div class="image-preview" id="imagePreview">
+        <!-- .image-preview__image -->
+        <img src="" alt="Image preview" class="image-preview__image">
+        <!-- .image-preview__default-text -->
+        <span class="image-preview__default-text">
+            Upload Work Here
+        </span>
+    </div>
+    <script>
+        const inpFile = document.getElementById("inpFile");
+        const previewContainer = document.getElementById("imagePreview");
+        const previewImage = previewContainer.querySelector(".image-preview__image");
+        const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
+        inpFile.addEventListener("change", function () {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                previewDefaultText.style.display = "";
+                previewImage.style.display = "block";
+                reader.addEventListener("load", function () {
+                    previewImage.setAttribute("src", this.result);
+                });
+                reader.readAsDataURL(file);
+                Tesseract.recognize
+                    (
+                        file,
+                        'eng',
+                        { logger: m => console.log(m) }
+                    ).then(({ data: { text } }) => {
+                        console.log(text);
+                    })
+            }
+            else {
+                previewDefaultText.style.display = null;
+                previewImage.style.display = "";
+                previewImage.setAttribute("src", "");
+            }
+        });
+        // Tesseract.recognize(
+        //     'SampleEquation.png',
+        //     'eng',
+        //     { logger: m => console.log(m) }
+        // ).then(({ data: { text } }) => {
+
+        // })
+
+    </script>
+</body>
+
+</html>
