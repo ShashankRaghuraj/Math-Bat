@@ -32,3 +32,26 @@
     display: inline-block;
     vertical-align: top;
 }
+
+.gw-centermedaddy {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.image-preview__default-text {
+
+}
+
+.image-preview__image {
+
+}
+
+.image-preview {
+
+}
+
+.inpFile {
+
+}
