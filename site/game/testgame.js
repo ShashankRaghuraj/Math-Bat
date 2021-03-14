@@ -56,7 +56,7 @@ for (let i = 0; i < operators.length; i++) {
                 options.target.top = y;
             }
         });
-        canvas.add(op_text);
+        canvas.add(op);
     }
 
 }

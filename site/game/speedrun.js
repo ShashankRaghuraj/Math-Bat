@@ -12,9 +12,9 @@ function getArrayRandomElement(arr) {
 function getnumbers(number_num) {
     let number_of_numbers = Number(number_num);
     var numbers = [];
-    const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     for (let step = 0; step < number_of_numbers; step++) {
-        var number = getRandomInt(9);
+        let number = getArrayRandomElement()igits;
         
         numbers.push(number);
     }
