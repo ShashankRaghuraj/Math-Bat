@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./DrawingStyle.css" />
     <title>Intro to Canvas</title>
-    <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js%27%3E'></script>
+    <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
 </head>
 
 </html>
@@ -14,30 +14,41 @@
 <body>
     <canvas width="200" height="100" style="height:50vh" id="canvas"></canvas>
     <form action="/action_page.php">
-        <label for="equation">3+8=</label>
+        <label for="equation">10-8=</label>
         <input type="text" id="equation" name="equation"><br><br>
+        <input type="text" id="isRight" name= "isRight"><br><br>
     </form>
-    <button>Click Here</button>
+    <button onclick="Print()">Click me</button>>
     <script src="DrawingCanvas.js"></script>
 </body>
 
 <script>
 
+function Print(){
+    var canvas = document.getElementById('canvas');
+    var dataURL = canvas.toDataURL();
+    const context = canvas.getContext('2d');
+        // document.write('<img src="'+img+'"/>');
 
-var canvas = document.getElementById("canvas");
-    var img    = canvas.toDataURL("image/png");
-    // document.write('<img src="'+img+'"/>');
 
-
-Tesseract.recognize
-                    (
-                        [ img ],
-                        'eng',
-                        { logger: m => console.log(m) }
-                    ).then(({ data: { text } }) => {
-                        console.log(text);
-                        document.getElementById("gooselover").textContent = text;
-                    })
+    Tesseract.recognize
+                        (
+                            dataURL,
+                            'eng',
+                            { logger: m => console.log(m) }
+                        ).then(({ data: { text } }) => {
+                            console.log(text);
+                            document.getElementById("equation").value = text;
+                            context.clearRect(0, 0, canvas.width, canvas.height);
+                            if(10-8 == text){
+                                document.getElementById("isRight").value = "You are correct!!";
+                            }
+                            else{
+                                document.getElementById("isRight").value = "Sorry, this is incorrect, please try again";
+                                document.getElementById("equation").value = "";
+                            }
+                        })
+}
 
 
 </script>

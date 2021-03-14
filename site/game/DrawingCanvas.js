@@ -23,7 +23,7 @@ window.addEventListener("load", () =>{
         ctx.lineCap = "round";
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
-        ctx.beinPath();
+        ctx.beginPath();
         ctx.moveTo(e.clientX,e.clientY);
     }
     canvas.addEventListener('mousedown', startPosition);

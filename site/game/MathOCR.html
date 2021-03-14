@@ -65,7 +65,7 @@
                 reader.readAsDataURL(file);
                 Tesseract.recognize
                     (
-                        file,
+                        [INSERT FILE NAME],
                         'eng',
                         { logger: m => console.log(m) }
                     ).then(({ data: { text } }) => {
