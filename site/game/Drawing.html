@@ -28,13 +28,14 @@
 
 <body>
     <div style="width:100%; align-items: center;">
-        <canvas width="200" height="100" class="gw-center" style="height:50vh;" id="canvas"></canvas>
+        <canvas width="200" height="100" class="gw-center" style="height:15rem;" id="canvas"></canvas>
         <form class="gw-center" action="/action_page.php">
-            <label for="equation">10-8=</label><br>
-            <input type="text" id="equation" name="equation"><br><br>
-            <p id="isRight" class="isRight">Waiting for Response</p><br><br>
+            <label style="display: none;" for="equation">10-8=</label>
+            <input style="display: none;" type="text" id="equation" name="equation">
+            <h1 id="yoyo" style="font-size: 50px;">0</h1>
+            <p id="isRight" class="isRight">Please Enter Your Answer</p><br>
         </form>
-        <button class="gw-center" onclick="Print()">Click me</button>
+        <button class="gw-center" style="font-size: 20px;" onclick="Print()">Check Answer</button>
         <script src="DrawingCanvas.js"></script>
     </div>
     
@@ -57,13 +58,17 @@ function Print(){
                         ).then(({ data: { text } }) => {
                             console.log(text);
                             document.getElementById("equation").value = text;
+                            document.getElementById("yoyo").textContent = text;
                             context.clearRect(0, 0, canvas.width, canvas.height);
                             if(10-8 == text){
                                 document.getElementById("isRight").textContent = "You are correct!!";
+                                document.getElementById("yoyo").style.color = "green";
                             }
-                            else{
+                            else {
                                 document.getElementById("isRight").textContent = "Sorry, this is incorrect, please try again";
                                 document.getElementById("equation").value = "";
+                                document.getElementById("yoyo").textContent = "0";
+                                document.getElementById("yoyo").style.color = "black";
                             }
                         })
 }
