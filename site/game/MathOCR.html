@@ -31,13 +31,13 @@
 
 <body>
     <h1>
-        Image Preview On File Uploads
+        Equation Checker!
     </h1>
     <input type = "file" name = "inpFile" id = "inpFile">
     <div class = "image-preview" id= "imagePreview">
         <img src= "" alt = "Image preview" class = "image-preview__image">
         <span class = "image-preview__default-text">
-            Image Preview
+           Upload Work Here
         </span>
     </div>
     <script>
@@ -50,12 +50,20 @@
             if(file)
             {
                 const reader = new FileReader();
-                previewDefaultText.style.display = null;
+                previewDefaultText.style.display = "";
                 previewImage.style.display = "block";
                 reader.addEventListener("load", function(){
                     previewImage.setAttribute("src", this.result);
                 });
                 reader.readAsDataURL(file);
+                Tesseract.recognize
+                    (
+                        file,
+                        'eng',
+                        { logger: m => console.log(m) }
+                    ).then(({ data: { text } }) => {
+                        console.log(text);
+                    })
             }
             else{
                 previewDefaultText.style.display = null;
