@@ -1,13 +1,43 @@
 <!DOCTYPE html>
-<html lang= "en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name = "viewport" content= "width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="./DrawingStyle.css"/>
-        <title>Intro to Canvas</title>
-    </head>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./DrawingStyle.css" />
+    <title>Intro to Canvas</title>
+    <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js%27%3E'></script>
+</head>
+
 </html>
+
 <body>
-    <canvas id="canvas"></canvas>
+    <canvas width="200" height="100" style="height:50vh" id="canvas"></canvas>
+    <form action="/action_page.php">
+        <label for="equation">3+8=</label>
+        <input type="text" id="equation" name="equation"><br><br>
+    </form>
+    <button>Click Here</button>
     <script src="DrawingCanvas.js"></script>
 </body>
+
+<script>
+
+
+var canvas = document.getElementById("canvas");
+    var img    = canvas.toDataURL("image/png");
+    // document.write('<img src="'+img+'"/>');
+
+
+Tesseract.recognize
+                    (
+                        [ img ],
+                        'eng',
+                        { logger: m => console.log(m) }
+                    ).then(({ data: { text } }) => {
+                        console.log(text);
+                        document.getElementById("gooselover").textContent = text;
+                    })
+
+
+</script>
