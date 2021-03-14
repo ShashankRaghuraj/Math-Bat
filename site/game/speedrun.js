@@ -1,44 +1,43 @@
-function getRandomInt(max) {
+const operator_array = ["+", "-", "*", ""];
+
+function random_int(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-function getArrayRandomElement(arr) {
+function random_array_element(arr) {
     if (arr && arr.length) {
-        return arr[getRandomInt(arr.length)];
+        return arr[random_int(arr.length)];
     }
     // The undefined will be returned if the empty array was passed
 }
 
-function getnumbers(number_num) {
+function random_numbers(number_num) {
     let number_of_numbers = Number(number_num);
     var numbers = [];
     const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     for (let step = 0; step < number_of_numbers; step++) {
-        let number = getArrayRandomElement(digits);
+        let number = random_array_element(digits);
         numbers.push(number);
     }
     return numbers;
 }
 
 function create_solution(numbers) {
-    const operator_array = ["+", "-", "*", "/", ""];
     let expression = "";
-    let proper_answer = "";
+    let operators = [];
     for (let i = 0; i < numbers.length; i++) {
         let item = numbers[i];
         expression += item;
-        let element = getArrayRandomElement(operator_array);
-        expression += element;
-        proper_answer += element;
+        let operator = random_array_element(operator_array);
+        expression += operator;
+        operators.push(operator);
     }
-    var last_char = expression.charAt(-1);
-    if (last_char === "+"||last_char === "-"||last_char === "*"||last_char === "/"){
-    	expression = expression.slice(0, -1);
-    	
+    var last_char = expression.charAt(expression.length - 1);
+    if (operator_array.includes(last_char)) {
+        expression = expression.slice(0, -1);
+
     }
+    operators = operators.slice(0, -1);
     let answer = eval(expression);
-    return [expression, numbers, answer];
-
+    return [expression, numbers, answer, operators];
 }
-
-console.log(create_solution(getnumbers(6)));

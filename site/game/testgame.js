@@ -9,10 +9,18 @@ canvas.on('mouse:move', function (options) {
 })
 */
 
-let operators = ['+', '–', '×', '÷', '(', ')'];
+let problem = create_solution(random_numbers(6));
+
+console.log(problem);
+
+let operators = ['+', '-', '*', '.'];
 
 let x = 0;
 let y = 0;
+
+let ops_chosen = [];
+for (let i = 0; i < problem[3].length; i++)
+    ops_chosen.push("");
 
 function within(blank, x, y)
 {
@@ -31,6 +39,7 @@ for (let i = 0; i < operators.length; i++) {
             hasBorders: false,
             hasControls: false,
             MY_isoperator: true,
+            MY_operatorkind: operators[i],
         });
         op.on('mousedown', function (options) {
             x = options.target.left;
@@ -38,20 +47,42 @@ for (let i = 0; i < operators.length; i++) {
         });
         op.on('moved', function (options) {
             let t = options.target;
+            let success = false;
             for (let i = 0; i < blanks.length; i++)
             {
                 let blank = blanks[i];
                 if (within(blank, t.left, t.top))
                 {
-                    current_blank = blank.MY_position;
+                    ops_chosen[blank.MY_position] = t.MY_operatorkind;
+                    console.log(ops_chosen);
+                    success = true;
+                    t.left = blank.left + margin - 10;
+                    t.top = blank.top + margin - 20;
+
+                    let equal = true;
+                    for (let i = 0; i < problem[3].length; i++)
+                    {
+                        if (ops_chosen[i] != problem[3][i])
+                        {
+                            equal = false;
+                            break;
+                        }
+                    }
+                    if (equal)
+                    {
+                        alert('you did it buddy');
+                        points += 69;
+                        elapsed += 69
+                        changeScore(points);
+                    }
                     break;
                 }
-                else
-                {
-                    current_blank = null;
-                }
             }
-            console.log(current_blank);
+            if (!success)
+            {
+                t.left = x;
+                t.top = y;
+            }
         });
         canvas.add(op);
     }
@@ -60,15 +91,16 @@ for (let i = 0; i < operators.length; i++) {
 let current_blank = null;
 let blanks = [];
 const n_numbers = 8;
-const margin = 25;
+const margin = 32;
 for (let i = 0; i < n_numbers; i++) {
-    let x_pos = 245 + 75 * i;
+    let x_pos = 345 + 75 * i;
     let blank = new fabric.Rect({
         top: 260 - margin,
         left: x_pos - margin,
         width: 2 * margin,
         height: 2 * margin,
         fill: 'red',
+        opacity: 0.05,
         selectable: false,
         MY_position: i,
     });
@@ -77,11 +109,11 @@ for (let i = 0; i < n_numbers; i++) {
 }
 console.log(blanks);
 
-let reactants = getnumbers(n_numbers);
+let reactants = problem[1];
 for (let i = 0; i < reactants.length; i++) {
     canvas.add(new fabric.Text(reactants[i].toString(), {
         top: 240,
-        left: 200 + 75 * i,
+        left: 300 + 75 * i,
         selectable: false,
     }));
 }
@@ -89,12 +121,12 @@ for (let i = 0; i < reactants.length; i++) {
 // equals sign
 canvas.add(new fabric.Text('=', {
     top: 240,
-    left: 150,
+    left: 200,
     selectable: false,
 }));
 
 // target value
-let target = 5;
+let target = problem[2];
 canvas.add(new fabric.Text(target.toString(), {
     top: 240,
     left: 100,
@@ -102,7 +134,7 @@ canvas.add(new fabric.Text(target.toString(), {
 }));
 
 // TIME
-let elapsed = 30;
+let elapsed = 420;
 let time = new fabric.Text('0', {
     top: 50,
     left: 100,
@@ -121,7 +153,7 @@ function changeScore(new_score) {
     score.set('text', `${new_score}`);
     canvas.renderAll();
 }
-
+let points = 0;
 let score = new fabric.Text('0', {
     top: 50,
     left: 800,
