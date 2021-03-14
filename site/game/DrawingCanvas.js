@@ -19,7 +19,7 @@ window.addEventListener("load", () =>{
         if(!painting){
             return;
         }
-        ctx.lineWidth = 10;
+        ctx.lineWidth = 12;
         ctx.lineCap = "round";
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
