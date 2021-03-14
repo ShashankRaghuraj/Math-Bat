@@ -46,6 +46,7 @@
         <span class="image-preview__default-text">
             Upload Work Here
         </span>
+        <h1 id="gooselover">Answer goes here.</h1>
     </div>
     <script>
         const inpFile = document.getElementById("inpFile");
@@ -69,6 +70,7 @@
                         { logger: m => console.log(m) }
                     ).then(({ data: { text } }) => {
                         console.log(text);
+                        document.getElementById("gooselover").textContent = text;
                     })
             }
             else {
